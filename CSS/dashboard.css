@@ -1,0 +1,156 @@
+html,
+body {
+  height: 100vh;
+}
+
+.container-fluid {
+  margin-left: 16%;
+  width: 84%;
+  background: #f1f3f6;
+  padding: 1px 0 0 0;
+  flex: 1 0 auto;
+}
+.container {
+  padding: 1px 20px;
+  max-width: 99.5%;
+  margin: 1%;
+  background-color: #ffffff;
+  border: 1px;
+  border-radius: 5px;
+}
+
+h1,
+h2,
+nobr {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: normal;
+}
+
+hr {
+  border-top: 2px solid #fdb415;
+}
+
+nobr {
+  font-size: large;
+}
+
+header {
+  display: flex;
+}
+
+.left-dash {
+  width: 95%;
+}
+
+.right-dash {
+  padding: 30px;
+  margin: 25px;
+}
+
+/* Style the icon */
+.icon {
+  font-size: 40px;
+  color: #fdb415;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: rotate(360deg);
+  transition: transform 2s ease-in-out;
+  color: #3999ff;
+}
+
+/* Style the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.widgets {
+  padding: 10px;
+  width: 99%;
+  display: flex;
+  justify-content: center;
+}
+
+.widget {
+  border: 2px solid #627a7a;
+  background-color: #ecf9ff;
+  height: 110px;
+  width: 15%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.dbh {
+  text-align: center;
+}
+
+.quick-actions > a {
+  color: black;
+  font-size: large;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  width: 18%;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #627a7a;
+  border-radius: 30px;
+  background-color: #ecf9ff;
+}
+
+.reports {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.chart {
+  width: 45%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.in-chart {
+  padding: 10px 20px;
+  border: 1px solid #928577;
+  background-color: #ffe7cc;
+  border-radius: 5px;
+}

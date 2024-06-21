@@ -1,0 +1,300 @@
+<script type="text/javascript">
+  var pid = "none";
+  function showhide(id) {
+    var elements = document.getElementById(id).childNodes;
+    var menu = elements[3];
+    var arrow = elements[1].childNodes[4].childNodes[1];
+    if (menu.style.display == "block") {
+      menu.style.display = "none";
+      arrow.style.transform = "rotate(0deg)";
+      elements[1].style.color = "#eeeeee";
+    } else {
+      menu.style.display = "block";
+      arrow.style.transform = "rotate(270deg)";
+      elements[1].style.color = "green";
+    }
+    if (pid == id) pid = "none";
+    if (pid != "none") {
+      elements = document.getElementById(pid).childNodes;
+      menu = document.getElementById(pid).childNodes[3];
+      arrow = elements[1].childNodes[4].childNodes[1];
+      if (menu.style.display == "block") {
+        menu.style.display = "none";
+        arrow.style.transform = "rotate(0deg)";
+        elements[1].style.color = "#eeeeee";
+      }
+    }
+    pid = id;
+  }
+
+  function showOptions() {
+    var flag = document.getElementById("options");
+    if (flag.style.display == "block") {
+      flag.style.display = "none";
+      document.getElementById("mark").style.display = "none";
+    } else {
+      flag.style.display = "block";
+      document.getElementById("mark").style.display = "block";
+    }
+  }
+</script>
+
+<div class="sidenav">
+  <div class="card">
+    <div class="card-body">
+      <div class="logo">
+        <img
+          src="/pharmacy-management-system/images/prof.jpg"
+          class="profile"
+        />
+        <h1 class="logo-caption">
+          <span class="tweak">M</span>aharashtra
+          <span class="tweak">M</span>edical
+        </h1>
+      </div>
+      <!-- logo class -->
+
+      <!-- dashboard start -->
+      <div class="main-menu-item">
+        <a href="/pharmacy-management-system/dashboard.php"
+          ><i class="fa fa-dashboard"></i><span>Dashboard</span></a
+        >
+      </div>
+      <!-- dashboard end -->
+
+      <!-- invoice strat -->
+      <div id="first" class="main-menu-item" onclick="showhide(this.id);">
+        <a href="#">
+          <i class="fa fa-balance-scale"></i><span>Invoice</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu" style="display: none">
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/invoicing/tax/invoice.php"
+              >Manage Tax Invoice</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/invoicing/purchase/PO.php"
+              >Purchase Order</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- invoice end -->
+
+      <!-- customer end -->
+      <div id="second" class="main-menu-item" onclick="showhide(this.id);">
+        <a href="#">
+          <i class="fa fa-handshake"></i><span>Customer</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu" style="display: none">
+          <!--C:\xampp1\htdocs\imp_temp_project\php\addcustom-->
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/customer/addc.php"
+              >Add Customer</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/customer/managec.php"
+              >Manage Customer</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- customer end -->
+
+      <!-- medicine strat -->
+      <div id="third" class="main-menu-item" onclick="showhide(this.id);">
+        <a href="#">
+          <i class="fa fa-shopping-bag"></i><span>Medicine</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu" style="display: none">
+          <!--C:\xampp1\htdocs\imp_temp_project\php\medicine-->
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/medicine/addm.php"
+              >Add Medicine</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/medicine/managem.php"
+              >Manage Medicine</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- medicine end -->
+
+      <!-- manufacturer start -->
+      <div id="fourth" class="main-menu-item" onclick="showhide(this.id);">
+        <a href="#">
+          <i class="fas fa-group"></i><span>Supplier</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu" style="display: none">
+          <!--C:\xampp1\htdocs\imp_temp_project\php\addsup-->
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/supplier/addsup.php"
+              >Add Supplier</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/supplier/managesup.php"
+              >Manage Supplier</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- manufacturer end -->
+
+      <!-- purchase start -->
+      <div id="fifth" class="main-menu-item" onclick="showhide(this.id);">
+        <a href="#">
+          <i class="fa fa-bar-chart"></i><span>Purchase and Sales</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu" style="display: none">
+          <!--C:\xampp1\htdocs\imp_temp_project\php\purchase-->
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/purchase/addp.php"
+              >Add Purchase</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/purchase/managep.php"
+              >Manage Purchase</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/sales/addsales.php"
+              >Add Sales</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/sales/manages.php"
+              >Manage Sales</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- purchase end -->
+
+      <!-- report start -->
+      <div id="sixth" class="main-menu-item" onclick="showhide(this.id);">
+        <a href="#">
+          <i class="fa fa-book"></i><span>Report</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu" style="display: none">
+          <li class="treeview">
+            <a
+              href="/pharmacy-management-system/php/report/SReport/salesreport.php"
+              >Sales Report</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/report/PReport/preport.php"
+              >Purchase Report</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- report end -->
+
+      <!-- search start -->
+      <div id="seventh" class="main-menu-item" onclick="showhide(this.id);">
+        <a href="#">
+          <i class="fa fa-search"></i><span>Search</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu" style="display: none">
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/admin/admindetails.php"
+              >Admin</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/customer/addc.php"
+              >Customer</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/medicine/addm.php"
+              >Medicine</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/supplier/addsup.php"
+              >Supplier</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/purchase/addp.php"
+              >Purchase</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/sales/addsales.php"
+              >Sales</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/invoicing/tax/invoice.php"
+              >Tax Invoice</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/invoicing/purchase/PO.php"
+              >Purchase Order</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/customer/managec.php"
+              >Manage Customers</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/medicine/managem.php"
+              >Manage Medicine</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/supplier/managesup.php"
+              >Manage Supplier</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/purchase/managep.php"
+              >Manage Purchase</a
+            >
+          </li>
+          <li class="treeview">
+            <a href="/pharmacy-management-system/php/sales/manages.php"
+              >Manage Sales</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- search end -->
+    </div>
+    <!-- card-body class -->
+  </div>
+  <!-- card  -->
+</div>
